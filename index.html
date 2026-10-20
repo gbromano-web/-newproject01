@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manookan Fried Chicken House | ₱25 Fried Chicken on Gorordo Ave., Cebu City</title>
+<meta name="description" content="Hot, crispy fried chicken fried fresh all day on Gorordo Avenue, Kamputhaw, Cebu City. Any part ₱25. See our menu, process and FAQ.">
+<meta property="og:title" content="Manookan Fried Chicken House | ₱25 Fried Chicken on Gorordo Ave., Cebu City">
+<meta property="og:description" content="Hot, crispy fried chicken fried fresh all day on Gorordo Avenue, Kamputhaw, Cebu City. Any part ₱25. See our menu, process and FAQ.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#6e0e10">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap">
+
+</head>
+<body>
+<style>
+/* Layout: a street-stall price board. Red header band, kraft-paper body, yellow price tickets; one column of stacked sections, cards in wrapping grids. */
+:root {
+  --red: #a3161a;
+  --red-deep: #6e0e10;
+  --yellow: #ffc21a;
+  --paper: #fbf3e4;
+  --card: #fffaf1;
+  --ink: #24160e;
+  --muted: #6b5444;
+  --line: #e6d6bd;
+  --on-red: #fff6e6;
+  --shadow: 0 1px 0 rgba(60, 30, 10, .06), 0 8px 24px -16px rgba(60, 30, 10, .35);
+  --display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --red: #c4262b; --red-deep: #4a0a0c; --yellow: #ffc933; --paper: #1b120d; --card: #271a13;
+    --ink: #f6eadb; --muted: #c4ae98; --line: #3d2b20; --on-red: #fff6e6;
+    --shadow: 0 1px 0 rgba(0,0,0,.3), 0 10px 26px -18px rgba(0,0,0,.8);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --red: #c4262b; --red-deep: #4a0a0c; --yellow: #ffc933; --paper: #1b120d; --card: #271a13;
+  --ink: #f6eadb; --muted: #c4ae98; --line: #3d2b20; --on-red: #fff6e6;
+  --shadow: 0 1px 0 rgba(0,0,0,.3), 0 10px 26px -18px rgba(0,0,0,.8);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; padding-bottom: 76px; }
+@media (min-width: 900px) { body { padding-bottom: 0; } }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: .01em; line-height: 1.02; text-wrap: balance; margin: 0; text-transform: uppercase; }
+h2 { font-size: clamp(2.1rem, 5vw, 3.2rem); }
+h3 { font-size: 1.45rem; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; border-radius: 4px; }
+.eyebrow { font-weight: 700; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+.lead { color: var(--muted); max-width: 62ch; font-size: 1.06rem; }
+section { padding-block: 64px; border-top: 1px solid var(--line); }
+.sec-head { display: grid; gap: 12px; margin-bottom: 32px; }
+
+/* header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--red-deep); color: var(--on-red); }
+.top .wrap { display: flex; align-items: center; gap: 16px; padding-block: 10px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand img { width: 40px; height: auto; }
+.brand span { font-family: var(--display); font-size: 1.35rem; letter-spacing: .03em; }
+nav { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { text-decoration: none; font-weight: 600; font-size: .92rem; padding: 8px 10px; border-radius: 6px; }
+nav a:hover { background: rgba(255,255,255,.12); }
+@media (max-width: 720px) { nav { display: none; } }
+
+/* hero */
+.hero { position: relative; color: #fff6e6; background: #3a1608; overflow: hidden; }
+.hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(40,10,4,.88) 0%, rgba(40,10,4,.6) 48%, rgba(40,10,4,.1) 100%); }
+.hero .wrap { position: relative; z-index: 1; padding-block: 72px 64px; display: grid; gap: 20px; }
+.hero h1 { font-size: clamp(3rem, 9vw, 6.2rem); max-width: 11ch; color: #fff6e6; }
+.hero h1 em { font-style: normal; color: #ffc21a; }
+.hero p { max-width: 44ch; font-size: 1.15rem; color: #f5e3cc; }
+.ticket { display: inline-flex; align-items: baseline; gap: 10px; background: #ffc21a; color: #24160e; padding: 8px 16px 10px; border-radius: 4px; transform: rotate(-2deg); width: max-content; box-shadow: 0 6px 0 rgba(0,0,0,.25); }
+.ticket b { font-family: var(--display); font-size: 2.4rem; line-height: 1; font-weight: 400; }
+.ticket span { font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 700; text-decoration: none; border: 2px solid transparent; cursor: pointer; font-family: var(--body); font-size: 1rem; }
+.btn-primary { background: #ffc21a; color: #24160e; }
+.btn-primary:hover { background: #ffd24f; }
+.btn-ghost { border-color: rgba(255,246,230,.7); color: #fff6e6; background: transparent; }
+.btn-ghost:hover { background: rgba(255,246,230,.12); }
+.trust { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .9rem; color: #f5e3cc; font-weight: 600; }
+.trust span::before { content: "✓ "; color: #ffc21a; }
+
+/* pillars */
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.pillar { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+.pillar .ico { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--red); color: var(--on-red); font-family: var(--display); font-size: 1.2rem; }
+.pillar p { color: var(--muted); }
+
+/* menu */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.chip { font: 600 .9rem var(--body); padding: 8px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; min-height: 40px; }
+.chip[aria-pressed="true"] { background: var(--red); border-color: var(--red); color: var(--on-red); }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.item { text-align: left; font: inherit; color: inherit; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; padding: 0; cursor: pointer; display: grid; grid-template-rows: auto 1fr; box-shadow: var(--shadow); transition: transform .15s ease; }
+.item:hover { transform: translateY(-3px); }
+.item .ph { aspect-ratio: 4 / 3; background: var(--line); position: relative; max-width: 100%; }
+.item .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.price { position: absolute; right: 10px; top: 10px; background: var(--yellow); color: #24160e; font-family: var(--display); font-size: 1.35rem; padding: 2px 10px 4px; border-radius: 4px; transform: rotate(2deg); }
+.save { position: absolute; left: 10px; top: 12px; background: var(--red); color: var(--on-red); font-weight: 800; font-size: .72rem; letter-spacing: .08em; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
+.item .body { padding: 16px 18px 18px; display: grid; gap: 6px; align-content: start; }
+.item .body p { color: var(--muted); font-size: .95rem; }
+.item .more { font-weight: 700; font-size: .85rem; color: var(--red); margin-top: 4px; }
+.note { margin-top: 18px; color: var(--muted); font-size: .92rem; }
+
+/* info sheet */
+dialog { border: none; padding: 0; border-radius: 14px; width: min(560px, calc(100vw - 32px)); max-height: calc(100vh - 48px); background: var(--card); color: var(--ink); box-shadow: 0 30px 80px -20px rgba(0,0,0,.6); }
+dialog::backdrop { background: rgba(20, 8, 4, .62); }
+.sheet img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.sheet .in { padding: 20px 22px 24px; display: grid; gap: 18px; }
+.sheet .row1 { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.sheet .row1 b { font-family: var(--display); font-size: 1.9rem; font-weight: 400; color: var(--red); }
+.blk { display: grid; gap: 6px; }
+.blk h4 { margin: 0; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.meter { display: flex; gap: 5px; align-items: center; }
+.meter i { width: 26px; height: 10px; border-radius: 3px; background: var(--line); }
+.meter i.on { background: var(--red); }
+.meter span { margin-left: 8px; font-weight: 600; font-size: .92rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { border: 1.5px solid var(--ink); border-radius: 999px; padding: 2px 10px; font-size: .82rem; font-weight: 700; }
+.close { position: absolute; right: 10px; top: 10px; width: 40px; height: 40px; border-radius: 50%; border: none; background: rgba(20,8,4,.7); color: #fff; font-size: 1.3rem; cursor: pointer; }
+
+/* process */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; counter-reset: s; }
+.step { display: grid; gap: 10px; align-content: start; }
+.step .n { font-family: var(--display); font-size: 3.4rem; line-height: 1; color: var(--red); }
+.step p { color: var(--muted); }
+.split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; margin-top: 40px; }
+@media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
+.split img { border-radius: 10px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.flavor { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+.flavor th, .flavor td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.flavor th { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.flavor tr:last-child td { border-bottom: none; }
+.soon { margin-top: 28px; background: var(--card); border: 1.5px dashed var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 6px; }
+.soon ul { margin: 0; padding-left: 20px; color: var(--muted); }
+
+/* faq */
+.faq-groups { display: grid; gap: 28px; }
+.faq-groups h3 { margin-bottom: 8px; color: var(--red); }
+details { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; list-style: none; padding: 16px 36px 16px 0; font-weight: 700; position: relative; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; position: absolute; right: 4px; top: 10px; font-family: var(--display); font-size: 1.6rem; color: var(--red); }
+details[open] summary::after { content: "–"; }
+details .ans { padding: 0 0 18px; color: var(--muted); display: grid; gap: 10px; max-width: 70ch; }
+details .ans b { color: var(--ink); }
+.reheat { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.reheat div { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+.reheat strong { display: block; color: var(--ink); }
+.reheat .t { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--red); }
+
+/* story */
+.story { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; }
+@media (max-width: 760px) { .story { grid-template-columns: 1fr; } .story .mascot { max-width: 220px; } }
+.story .mascot { width: 100%; height: auto; }
+.story .txt { display: grid; gap: 16px; max-width: 64ch; min-width: 0; }
+.story .txt p { color: var(--muted); }
+.story .txt h3 { color: var(--ink); margin-top: 8px; }
+
+/* visit */
+.visit { background: var(--red-deep); color: var(--on-red); border-top: none; }
+.visit .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
+@media (max-width: 760px) { .visit .wrap { grid-template-columns: 1fr; } }
+.visit h2 { color: var(--on-red); }
+.visit p { color: #f1d9c0; }
+.addr { font-size: 1.25rem; font-weight: 700; color: var(--on-red); user-select: all; }
+.review-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); border-radius: 10px; padding: 22px; display: grid; gap: 10px; }
+.stars { color: #ffc21a; font-size: 1.4rem; letter-spacing: 4px; }
+footer { background: #24160e; color: #c9b39b; font-size: .88rem; }
+footer .wrap { padding-block: 24px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
+.footlinks { display: flex; flex-wrap: wrap; gap: 6px 18px; } .footlinks a { color: #f1d9c0; text-decoration: none; font-weight: 600; } .footlinks a:hover { text-decoration: underline; }
+
+/* sticky mobile action bar */
+.actionbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: var(--red-deep); padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: flex; gap: 10px; box-shadow: 0 -8px 20px -10px rgba(0,0,0,.5); }
+.actionbar .btn { flex: 1; min-height: 46px; padding: 0 12px; font-size: .95rem; }
+@media (min-width: 900px) { .actionbar { display: none; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home"><img src="img/logo.png" alt="Manookan rooster mascot"><span>Manookan</span></a>
+    <nav aria-label="Main">
+      <a href="#process">Our Process</a>
+      <a href="#menu">Menu</a>
+      <a href="#faq">FAQ &amp; Nutrition</a>
+      <a href="#story">Our Story</a>
+      <a href="blog/">Blog</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero" id="home">
+  <img class="bg" src="img/hero.jpg" alt="A pile of golden fried chicken in the Manookan display case">
+  <div class="wrap">
+    <div class="ticket"><b>₱25</b><span>Any part</span></div>
+    <h1>Golden. Crunchy. <em>Fried fresh</em> all day.</h1>
+    <p>Hot fried chicken on Gorordo Avenue, made the honest way. Every piece, every price and every step, right here on this page.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Manookan+Fried+Chicken+House+102+Gorordo+Avenue+Kamputhaw+Cebu+City" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn btn-ghost" href="#menu">See the menu</a>
+    </div>
+    <div class="trust"><span>Fresh batches all day</span><span>Any part ₱25</span><span>102 Gorordo Ave., Kamputhaw</span></div>
+  </div>
+</div>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why our chicken</div>
+      <h2>What makes every piece worth it</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><div class="ico">1</div><h3>Fried all day</h3><p>We fry in batches from the morning on, so the tray you see is fresh, not hours old.</p></div>
+      <div class="pillar"><div class="ico">2</div><h3>Seasoned through</h3><p>Every piece is seasoned before it meets the flour, so the flavor is in the meat, not only on the skin.</p></div>
+      <div class="pillar"><div class="ico">3</div><h3>A crust you can hear</h3><p>Pressed into seasoned flour by hand for deep, craggy ridges that crackle when you bite.</p></div>
+      <div class="pillar"><div class="ico">4</div><h3>One fair price</h3><p>Wing, drumstick, thigh or breast: ₱25 each. No upcharge for the bigger piece.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Menu</div>
+      <h2>Every piece, every price</h2>
+      <p class="lead">All parts are ₱25. Tap any item to see what's in it, how crunchy it is and what to pair it with.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter menu">
+      <button class="chip" id="f-all" aria-pressed="true" data-f="all">All</button>
+      <button class="chip" id="f-piece" aria-pressed="false" data-f="piece">Pieces</button>
+      <button class="chip" id="f-set" aria-pressed="false" data-f="set">Sets</button>
+    </div>
+    <div class="menu-grid" id="grid"></div>
+    <p class="note">Every item's coating contains wheat flour. Ask us about other allergens before you order. <a href="downloads/Manookan_Fried_Chicken_House.pdf"><b>Download our menu (PDF)</b></a></p>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Our process &amp; quality</div>
+      <h2>Nothing to hide. Here's how we make it.</h2>
+      <p class="lead">You deserve to know what you're eating. These are the three steps every piece goes through before it reaches your bag.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Season</h3><p>Each piece is cut into its part and seasoned with our house blend, so the taste goes all the way through.</p></div>
+      <div class="step"><div class="n">02</div><h3>Coat by hand</h3><p>We press every piece firmly into seasoned flour. Pressing, not dusting, is what builds those extra-crunchy ridges.</p></div>
+      <div class="step"><div class="n">03</div><h3>Fry in small batches</h3><p>Batches go into the fryer through the day and come out golden and cooked through to the bone. Then straight onto the tray.</p></div>
+    </div>
+    <div class="split">
+      <img src="img/tray.jpg" alt="A full tray of fresh fried chicken at the Manookan stall">
+      <div class="blk" style="gap:14px">
+        <h3>What's in the flavor</h3>
+        <div class="tablewrap">
+          <table class="flavor">
+            <thead><tr><th>Flavor</th><th>Heat</th><th>Taste</th><th>Allergens</th></tr></thead>
+            <tbody><tr><td><b>Classic Manookan</b></td><td>Not spicy</td><td>Savory, well seasoned, golden crunch</td><td>Wheat</td></tr></tbody>
+          </table>
+        </div>
+        <p style="color:var(--muted)">Everything is fried in the same oil, so we can't promise zero cross-contact with any allergen.</p>
+      </div>
+    </div>
+    <div class="soon">
+      <strong>Coming to this page</strong>
+      <ul>
+        <li>Where our chicken comes from, and how often it's delivered</li>
+        <li>The oil we use and how often we change it</li>
+        <li>Measured nutrition values for every piece</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">FAQ &amp; nutrition</div>
+      <h2>Your questions, answered straight</h2>
+      <p class="lead">Can't find your answer? Ask us at the stall or message our Facebook page.</p>
+    </div>
+    <div class="faq-groups">
+      <div>
+        <h3>Nutrition</h3>
+        <details><summary>How many calories are in one piece?</summary><div class="ans"><p>We're having our pieces measured so we can post exact numbers here. Until then, as a general guide, a fried chicken piece is roughly 150 to 400 kcal depending on the part and size. Breast and thigh are the largest pieces; the wing is the smallest.</p></div></details>
+        <details><summary>Which piece is the lightest?</summary><div class="ans"><p>The wing is the smallest piece. Taking off the skin cuts the fat a lot, though you lose the crunch.</p></div></details>
+      </div>
+      <div>
+        <h3>Dietary needs</h3>
+        <details><summary>Is your chicken gluten-free?</summary><div class="ans"><p><b>No.</b> The coating is made with wheat flour, and everything shares the same fryer.</p></div></details>
+        <details><summary>Is it halal? Is it dairy-free?</summary><div class="ans"><p>Please ask us at the stall before you order and we'll tell you exactly what's in it. We'd rather answer you directly than guess on a website.</p></div></details>
+        <details><summary>I have a food allergy. Can I eat here?</summary><div class="ans"><p>Our coating contains <b>wheat</b>. Ask us about anything else before ordering. Because all pieces share one fryer, we can't guarantee there's no cross-contact.</p></div></details>
+      </div>
+      <div>
+        <h3>Cooking</h3>
+        <details><summary>Is the chicken cooked all the way through?</summary><div class="ans"><p><b>Yes.</b> Every piece is fried until it's cooked through to the bone, then goes onto the tray.</p></div></details>
+        <details><summary>Is it fresh or reheated?</summary><div class="ans"><p>We fry in batches throughout the day, so the tray keeps getting refilled with fresh pieces instead of reheating old ones.</p></div></details>
+      </div>
+      <div>
+        <h3>Keep it crispy at home</h3>
+        <details open><summary>How long does it keep, and how do I reheat it?</summary><div class="ans">
+          <p>Eat within 2 hours at room temperature. Put leftovers in a covered container in the fridge and finish them within 3 days. Let them sit out 10 minutes before reheating. Avoid the microwave alone: it makes the crust soggy.</p>
+          <div class="reheat">
+            <div><strong>Air fryer (best)</strong><span class="t">180 °C · 4–6 min</span><br>Turn once halfway.</div>
+            <div><strong>Oven or turbo broiler</strong><span class="t">200 °C · 10–15 min</span><br>On a rack, so air reaches the bottom.</div>
+            <div><strong>Pan</strong><span class="t">Medium heat · 3–4 min per side</span><br>Dry pan, covered.</div>
+            <div><strong>Microwave, in a hurry</strong><span class="t">60–90 sec + 2 min pan</span><br>The pan brings the crunch back.</div>
+          </div>
+        </div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap story">
+    <img class="mascot" src="img/logo.png" alt="Manookan Fried Chicken House logo: a rooster in a red chef's hat and bandana with crossed arms">
+    <div class="txt">
+      <div class="eyebrow">Our story</div>
+      <h2>The story behind the crunch</h2>
+      <p>In Cebuano, <i>manok</i> means chicken, and a <i>manookan</i> is a place for it. That's us: a fried chicken house on Gorordo Avenue that does one thing and does it properly.</p>
+      <p>Our rooster wears a chef's hat and a bandana, arms crossed, looking straight at you. He's proud, a little tough, and serious about his chicken. That's the attitude we fry with.</p>
+      <h3>Why we still fry it fresh</h3>
+      <p>Frying all day is more work than reheating. We do it anyway, because you can taste the difference in the first bite: the crust cracks and the meat stays juicy. And we keep every part at ₱25, because good chicken shouldn't be something you save for payday.</p>
+      <h3>Part of the neighborhood</h3>
+      <p>Rain or shine, we're here for the students, riders, office workers and families of Kamputhaw. Come say hi. The first batch is out in the morning.</p>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div style="display:grid;gap:16px;min-width:0">
+      <div class="eyebrow" style="color:#ffc21a">Visit us</div>
+      <h2>Find us on Gorordo Avenue</h2>
+      <p class="addr">102 Gorordo Ave., Kamputhaw, Cebu City</p>
+      <p>Look for the red sign and the full tray of golden chicken.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Manookan+Fried+Chicken+House+102+Gorordo+Avenue+Kamputhaw+Cebu+City" target="_blank" rel="noopener">Open in Google Maps</a>
+        <button class="btn btn-ghost" id="copy-addr" type="button">Copy address</button>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <h3 style="color:var(--on-red)">Tried our chicken?</h3>
+      <p>Your review helps neighbors find us. Search "Manookan Fried Chicken House" on Google Maps and tap <b>Write a review</b>. We read every one.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav class="footlinks" aria-label="Footer">
+      <a href="#menu">Menu</a>
+      <a href="blog/">Blog</a>
+      <a href="about/">About Us</a>
+      <a href="contact/">Contact</a>
+      <a href="privacy-policy/">Privacy Policy</a>
+      <a href="downloads/Manookan_Fried_Chicken_House.pdf">Download menu (PDF)</a>
+    </nav>
+    <span>© 2026 Manookan Fried Chicken House · 102 Gorordo Ave., Kamputhaw, Cebu City</span>
+  </div>
+</footer>
+
+<div class="actionbar">
+  <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Manookan+Fried+Chicken+House+102+Gorordo+Avenue+Kamputhaw+Cebu+City" target="_blank" rel="noopener">Get directions</a>
+  <a class="btn btn-ghost" href="#menu">Menu · ₱25</a>
+</div>
+
+<dialog id="sheet" aria-labelledby="sh-name">
+  <div class="sheet" style="position:relative">
+    <button class="close" id="sh-close" type="button" aria-label="Close">×</button>
+    <img id="sh-img" src="" alt="">
+    <div class="in">
+      <div class="row1"><div><h3 id="sh-name"></h3><p id="sh-desc" style="color:var(--muted)"></p></div><b id="sh-price"></b></div>
+      <div class="blk"><h4>Ingredients</h4><p id="sh-ing"></p></div>
+      <div class="blk"><h4>Heat</h4><div class="meter" id="sh-heat"></div></div>
+      <div class="blk"><h4>Crunch</h4><div class="meter" id="sh-crunch"></div></div>
+      <div class="blk"><h4>Goes great with</h4><p id="sh-pair"></p></div>
+      <div class="blk"><h4>Allergens</h4><div class="tags"><span class="tag">Wheat</span></div><p style="color:var(--muted);font-size:.9rem">Fried in shared oil. Ask us about other allergens.</p></div>
+      <div class="blk"><h4>Nutrition</h4><p style="color:var(--muted)">Being measured. Exact values per piece will be posted here.</p></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const ING = part => `Chicken ${part}, wheat flour coating, house seasoning, frying oil.`;
+const ITEMS = [
+  { id: "drumstick", cat: "piece", name: "Drumstick", price: "₱25", img: "img/drumstick.jpg", desc: "Juicy dark meat, crunchy all around. The crowd favorite.", ing: ING("drumstick"), crunch: [4, "Very crunchy"], pair: "Two drumsticks and a wing make a ₱75 meal. Or mix into a set." },
+  { id: "wing", cat: "piece", name: "Wing", price: "₱25", img: "img/wing.jpg", desc: "The most crust per bite, with crispy tips.", ing: ING("wing"), crunch: [5, "Extra crunchy"], pair: "Best eaten hot. Pairs with any other piece in a 6 pcs set." },
+  { id: "thigh", cat: "piece", name: "Thigh", price: "₱25", img: "img/pile2.jpg", desc: "Our juiciest, most tender piece.", ing: ING("thigh"), crunch: [4, "Very crunchy"], pair: "For the juicy-meat fans. Mix with drumsticks in a set." },
+  { id: "breast", cat: "piece", name: "Breast", price: "₱25", img: "img/set.jpg", desc: "The biggest piece: lean, meaty and golden.", ing: ING("breast"), crunch: [3, "Crunchy outside, soft inside"], pair: "The most meat for ₱25. Good for sharing." },
+  { id: "six", cat: "set", name: "6 pcs set", price: "₱140", save: "Save ₱10", img: "img/set.jpg", desc: "Mix any parts. Right for a small family.", ing: "6 pieces of your choice: wing, drumstick, thigh or breast. Same coating and seasoning as our single pieces.", crunch: [4, "Mixed parts"], pair: "Pick a mix of drumsticks and wings for the kids, thighs for the grown-ups." },
+  { id: "twelve", cat: "set", name: "12 pcs set", price: "₱270", save: "Save ₱30", img: "img/tray.jpg", desc: "Mix any parts. Made for the barkada.", ing: "12 pieces of your choice: wing, drumstick, thigh or breast. Same coating and seasoning as our single pieces.", crunch: [4, "Mixed parts"], pair: "Order ahead for parties and office merienda." }
+];
+const grid = document.getElementById("grid");
+function card(it) {
+  const b = document.createElement("button");
+  b.className = "item"; b.type = "button"; b.dataset.cat = it.cat;
+  b.setAttribute("aria-label", `${it.name}, ${it.price}. Open details`);
+  b.innerHTML = `<div class="ph"><img src="${it.img}" alt=""><span class="price">${it.price}</span>${it.save ? `<span class="save">${it.save}</span>` : ""}</div>
+    <div class="body"><h3>${it.name}</h3><p>${it.desc}</p><span class="more">See details →</span></div>`;
+  b.addEventListener("click", () => openSheet(it));
+  return b;
+}
+ITEMS.forEach(it => grid.appendChild(card(it)));
+document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x === c)));
+  const f = c.dataset.f;
+  grid.querySelectorAll(".item").forEach(i => { i.hidden = !(f === "all" || i.dataset.cat === f); });
+}));
+function meter(el, n, label) {
+  el.innerHTML = Array.from({ length: 5 }, (_, i) => `<i class="${i < n ? "on" : ""}"></i>`).join("") + `<span>${label}</span>`;
+}
+const sheet = document.getElementById("sheet");
+function openSheet(it) {
+  document.getElementById("sh-img").src = it.img;
+  document.getElementById("sh-img").alt = `${it.name} from Manookan`;
+  document.getElementById("sh-name").textContent = it.name;
+  document.getElementById("sh-desc").textContent = it.desc;
+  document.getElementById("sh-price").textContent = it.price;
+  document.getElementById("sh-ing").textContent = it.ing;
+  meter(document.getElementById("sh-heat"), 0, "Not spicy");
+  meter(document.getElementById("sh-crunch"), it.crunch[0], it.crunch[1]);
+  document.getElementById("sh-pair").textContent = it.pair;
+  if (sheet.showModal) sheet.showModal(); else sheet.setAttribute("open", "");
+}
+document.getElementById("sh-close").addEventListener("click", () => sheet.close());
+sheet.addEventListener("click", e => { if (e.target === sheet) sheet.close(); });
+document.getElementById("copy-addr").addEventListener("click", async e => {
+  const t = "102 Gorordo Ave., Kamputhaw, Cebu City";
+  try { await navigator.clipboard.writeText(t); e.target.textContent = "Address copied"; }
+  catch (_) { const r = document.createRange(); r.selectNodeContents(document.querySelector(".addr")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); e.target.textContent = "Selected, press copy"; }
+  setTimeout(() => (e.target.textContent = "Copy address"), 2500);
+});
+</script>
+
+</body>
+</html>
