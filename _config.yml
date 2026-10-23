@@ -1,0 +1,5 @@
+# Files kept in the repo but not published on manookan.com
+exclude:
+  - README.md
+  - LICENSE
+  - reels
