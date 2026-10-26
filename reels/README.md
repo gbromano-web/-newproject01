@@ -1,21 +1,29 @@
 # Reels auto-post folder
 
-Drop a reel here and it gets posted to the **Manookan FRIED Chicken HOUSE** Facebook Page automatically.
+Drop a reel here and it gets posted to the **Manookan FRIED Chicken HOUSE** Facebook Page **and** the Google Business Profile automatically.
 
-## How to use
+## Files for one reel (same name, different endings)
 
-1. Upload your video here: `my-reel.mp4`
-2. Upload a caption file with **exactly the same name**: `my-reel.txt`
-   - Line 1 = the reel title (short)
-   - Everything after line 1 = the caption
-3. That's it. The auto-poster checks this folder 3 times a day (8:52 AM, 11:52 AM and 4:52 PM Cebu time).
+| File | What it is | Needed? |
+|---|---|---|
+| `my-reel.mp4` | The video | Required |
+| `my-reel.txt` | Facebook caption. Line 1 = title, the rest = caption | Required |
+| `my-reel.google.txt` | Text for the Google Business post (no hashtags, no phone numbers) | Optional |
+| `my-reel.jpg` | Photo for the Google Business post | Optional |
+
+## What happens
+
+The auto-poster checks this folder 3 times a day (8:52 AM, 11:52 AM and 4:52 PM Cebu time) and, for one reel per check:
+
+1. Posts the video to the Facebook Page and confirms it's live.
+2. Uploads the video to the Google Business Profile gallery (Food & drink).
+3. If there's a `.google.txt`, publishes a Google post with that text, the `.jpg` photo and a "Learn more" button to manookan.com.
+4. Deletes the reel's files from this folder.
 
 ## Rules
 
-- **No caption file = no post.** A video on its own is never posted. The caption file is your approval.
-- One reel is posted per check, oldest first, so reels don't all go out at once.
-- After posting, the video and caption are deleted from this folder. Facebook keeps its own copy.
-- Keep videos under 25 MB (GitHub's upload limit in the browser).
+- **No caption file = no post.** A video on its own is never posted. The `.txt` file is your approval.
+- Google steps only run after the Facebook post is confirmed live.
+- One reel is posted per check, oldest first.
+- Keep videos under 25 MB and 30 seconds (Google's video limit).
 - Files starting with `_` (like `_TEMPLATE.txt`) are ignored.
-
-Upload link: https://github.com/gbromano-web/-newproject01/upload/main/reels
